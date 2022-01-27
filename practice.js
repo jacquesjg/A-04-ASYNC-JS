@@ -10,8 +10,21 @@ const fetchData = require('./fetchDataLibrary')
 // 10. Call fetchData (which returns a promise) and use the .then()  method to log the value the promise resolves with to the javascript console.
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-fetchData().then((data) => console.log(data))
+fetchData()
+  .then((data) => console.log(data))
+  .catch(error => console.log("error:", error.message))
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // 11. Call fetchData (which returns a promise) and use the async/await method to log the value the promise resolves with to the javascript console.
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const asyncFunction = async () => {
+  try {
+    const data = await fetchData();
+    console.log(data);
+  } catch (e) {
+    console.log("error:", e.message)
+  }
+};
+
+asyncFunction();

@@ -1,17 +1,27 @@
 1. What does it mean when we say javascript is asynchronous?
+Two or more  events not existing or happening at the same time.
 
 2. What are javascript promises?
+A promise is value thats not known when its created.
 
 3. What does it mean when a promise resolves?
+The promise is settled or “locked-in” to match the state of another promise
 
 4. What does it mean when a promise rejects?
+The operation failed.
 
 5. Explain the use of .then() on promises
+The then() method returns a Promise.
 
 6. 5. Explain the use of .catch() on promises
+Catches promises errors
 
 7. Explain the use of .finally() on promises
+.finally runs after promise .then() and .catch() regardless of resolve or rejection.
 
 8. Explain async functions and how async/await are used.
+Async functions handle promises. 
+Await can only be used inside of async functions to resolve promises.
 
 9. Provide one example of how promises can be used.
+Fetching API data.
